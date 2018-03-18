@@ -1,0 +1,15 @@
+<div class="cart-items">
+    <ul>
+      <li *ngFor="let item of cart" class="cart-item" >
+      <div *ngIf="item.added">
+        <span class="item-name">{{item.name}}</span>
+        <span (click)="back(item);"><i class="fas fa-times"></i></span>
+      </div>
+
+      </li>
+      <div>Sum: {{sum}}</div>
+      <a class="btn-add">
+        купить
+      </a>
+    </ul>
+  </div>
