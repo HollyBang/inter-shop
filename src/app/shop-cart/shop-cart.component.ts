@@ -22,7 +22,7 @@ export class ShopCartComponent implements OnInit {
   }
 
   
-  public buy(cart) {
+  public buy() {
     this.buyAllOrReset();
     this.sumCart = this.sum;
   }
