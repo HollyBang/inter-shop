@@ -16,6 +16,11 @@
   background-color: white;
   left: -100px;
 }
+.cart-name {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 25px;
+}
 .products {
   flex-grow: 3;
 }
@@ -25,7 +30,7 @@
 }
 
 .side-menu {
-  flex-grow: 1;
+  flex-grow: 2;
 }
 
 

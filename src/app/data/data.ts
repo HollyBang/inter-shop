@@ -24,5 +24,17 @@ export const data = [
     name: 'item4',
     price: 141.31,
     added: false
+  },
+  {
+    img: 5,
+    name: 'item5',
+    price: 101.11,
+    added: false
+  },
+  {
+    img: 6,
+    name: 'item6',
+    price: 111.21,
+    added: false
   }
 ]

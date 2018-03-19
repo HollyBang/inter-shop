@@ -7,9 +7,12 @@
       </div>
 
       </li>
-      <div>Sum: {{sum}}</div>
-      <a class="btn-add">
+      <div *ngIf="cart.length == 0">{{sumCart}}</div>
+      <a class="btn-add" (click)="buy()">
         купить
       </a>
+      <a class="btn-add" (click)="reset()">
+          reset
+        </a>
     </ul>
   </div>
