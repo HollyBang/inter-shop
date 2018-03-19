@@ -26,16 +26,13 @@ export class AppComponent {
     return Math.round(number * factor) / factor;
   }
   public addToCart(item) {
-    console.log('addToCart', item);
     item.added = !item.added;
     this.cart.push(item);
-    console.log('push to cart', this.cart)
     this.sum += item.price;
     this.sum = this.precisionRound(this.sum, 2)
   }
 
   public back(item) {
-    console.log('beck', item);
     item.added = !item.added;
     this.cart.splice(this.cart.indexOf(item), 1);
     this.sum -= item.price;
@@ -52,7 +49,6 @@ export class AppComponent {
 
   public cartToggle(){
     this.showHide = !this.showHide;
-    console.log('show/hide', this.showHide);
   }
 
   public changeLanguage() {

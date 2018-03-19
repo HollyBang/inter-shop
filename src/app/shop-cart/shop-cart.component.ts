@@ -24,14 +24,9 @@ export class ShopCartComponent implements OnInit {
   
   public buy(cart) {
     this.buyAllOrReset();
-    console.log('buy');
-    console.log('cart arr',this.cart);
     this.sumCart = this.sum;
-    console.log('sumCart',this.sumCart);
-    console.log('sum',this.sum);
   }
   public reset() {
-    console.log('reset');
     this.buyAllOrReset();
     this.sumCart = null;
   }
