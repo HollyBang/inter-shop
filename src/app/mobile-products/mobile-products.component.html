@@ -1,7 +1,7 @@
 
   <div class="products-store">
     <div class="products_item" *ngFor="let item of products">
-      <img src="https://placeimg.com/220/200/tech/{{item.img}}" alt="img">
+      <img src="https://placeimg.com/220/200/any/{{item.img}}" alt="img">
       <div class="products_info">
         <span class="products_name">{{item.name}}</span>
         <span class="products_price">${{item.price}}</span>
@@ -9,8 +9,8 @@
       <a class="btn-add" 
         [ngClass]="{'buyed': item.added}"
         
-        (click)="buy(item);">
-        {{item.added ? 'В корзине' : 'Купить'}}
+        (click)="addToCart(item);">
+        {{item.added ? 'In cart' : 'Buy'}}
     </a>
     </div>
   </div>

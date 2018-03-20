@@ -7,19 +7,33 @@
   margin-bottom: 10px;
   box-shadow: 0px 6px 24px -8px rgba(0,0,0,0.75);
 }
-
+.title {
+  color: whitesmoke;
+}
 .cart-icon {
   position: relative;
+  cursor: pointer;
 }
 .cart {
   position: absolute;
   background-color: white;
   left: -100px;
+  z-index: 100;
 }
 .cart-name {
   text-transform: capitalize;
   font-weight: 700;
   font-size: 25px;
+}
+.menu-links {
+  list-style: none;
+}
+.menu-links {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.active {
+  color: red;
 }
 .products {
   flex-grow: 3;

@@ -8,7 +8,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 150px;
+  width: 200px;
 }
 .cart-item {
   list-style: none;
@@ -29,6 +29,7 @@ ul {
   font-family: 'Montserrat', sans-serif; 
   color: #0fb8ad;
   transition: .2s ease-in-out;
+  cursor: pointer;
 }
 .btn-add:before {
   content: "";

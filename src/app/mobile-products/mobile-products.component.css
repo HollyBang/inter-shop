@@ -51,6 +51,7 @@
     font-family: 'Montserrat', sans-serif; 
     color: #0fb8ad;
     transition: .2s ease-in-out;
+    cursor: pointer;
   }
   .btn-add:before {
     content: "";
@@ -61,12 +62,4 @@
     top: -8px;
     left: -75px;
     transform: skewX(-45deg);
-  }
-  .btn-add:hover {
-    background: #0fb8ad;
-    color: #fff;
-  }
-  .btn-add:hover:before {
-    left: 150px;
-    transition: .5s ease-in-out;
   }

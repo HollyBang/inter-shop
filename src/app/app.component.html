@@ -2,26 +2,26 @@
 <div dir={{language}} class="wrapper">
   <header class="header">
     <div (click)="changeLanguage()"><i class="fas fa-language fa-2x"></i></div>
-    <h1>
+    <h1 class="title">
       Welcome to {{ title }}!
     </h1>
-    <div  class="cart-icon"><div (click)="cartToggle()"><span class="cart-name">корзина</span><i  class="fas fa-shopping-cart fa-2x"></i></div>
-      <app-shop-cart *ngIf="showHide" [cart]="cart" [back]="back" [buyAllOrReset]='buyAllOrReset' [sum]="sum" class="cart"></app-shop-cart>
+    <div  class="cart-icon"><div (click)="cartToggle()"><span class="cart-name">cart</span><i  class="fas fa-shopping-cart fa-2x"></i></div>
+      <app-shop-cart (testEvent)="reciveTest($event)" *ngIf="showHide" [cart]="cart" [back]="back" [buyAllOrReset]='buyAllOrReset' [sum]="sum" class="cart"></app-shop-cart>
     </div>
     
   </header>
   <div class="content">
     <div class="side-menu">
-      <ul>
-        <li><a routerLink="tv">tv</a></li>
-        <li><a routerLink="mobile">mobile</a></li>
-        <li><a href="">TVs</a></li>
-        <li><a href="">Mobiles</a></li>
-        <li><a href="">LapTops</a></li>
+      <ul class="menu-links">
+        <li><a [class.active]="activeLink == 'tv'" (click)="activeLink = 'tv'">TV</a></li>
+        <li><a [class.active]="activeLink == 'mobile'" (click)="activeLink = 'mobile'">Mobiles</a></li>
       </ul>
     </div>
-    <!-- <router-outlet></router-outlet> -->
-    <app-products class="products" [products]="products" [addToCart]="addToCart"></app-products>
+    <div class="products" [ngSwitch]="activeLink">
+      <app-products *ngSwitchCase="'tv'" [products]="tvData" [addToCart]="addToCart"></app-products>
+      <app-mobile-products *ngSwitchCase="'mobile'" [products]="mobileData" [addToCart]="addToCart"></app-mobile-products>
+    </div>
+    
     
   </div>
 </div>

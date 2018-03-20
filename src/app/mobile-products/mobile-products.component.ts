@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MobileProductsComponent implements OnInit {
   @Input() products;
   @Input()
-  public buy: Function; 
+  public addToCart: Function; 
   constructor() { }
 
   ngOnInit() {

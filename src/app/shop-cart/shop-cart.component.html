@@ -9,10 +9,13 @@
       </li>
       <div *ngIf="cart.length == 0">{{sumCart}}</div>
       <a class="btn-add" (click)="buy()">
-        купить
+        buy
       </a>
       <a class="btn-add" (click)="reset()">
           reset
+        </a>
+        <a class="btn-add" (click)="sendMessage()">
+          testOutputBuy
         </a>
     </ul>
   </div>

@@ -51,6 +51,7 @@
   font-family: 'Montserrat', sans-serif; 
   color: #0fb8ad;
   transition: .2s ease-in-out;
+  cursor: pointer;
 }
 .btn-add:before {
   content: "";

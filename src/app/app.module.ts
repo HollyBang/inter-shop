@@ -1,6 +1,6 @@
+import { DatafnService } from './datafn.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
@@ -8,11 +8,8 @@ import { ShopCartComponent } from './shop-cart/shop-cart.component';
 import { ProductsComponent } from './products/products.component';
 import { MobileProductsComponent } from './mobile-products/mobile-products.component';
 
-const appRoutes: Routes = [
-  { path: 'tv', component: ProductsComponent },
-  { path: 'mobile', component: MobileProductsComponent }
 
-];
+
 
 @NgModule({
   declarations: [
@@ -22,12 +19,9 @@ const appRoutes: Routes = [
     MobileProductsComponent
   ],
   imports: [
-    RouterModule.forRoot(
-      appRoutes
-    ),
     BrowserModule
   ],
-  providers: [],
+  providers: [DatafnService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

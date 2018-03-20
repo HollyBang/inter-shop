@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-
-import {data} from './data/data';
+import { DatafnService } from './datafn.service';
+import {tv, mobile} from './data/data';
 
 
 @Component({
@@ -9,12 +9,17 @@ import {data} from './data/data';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  cart = [];
+  cart: Array<any> = [];
   sum: number = null;
-  title = 'Shop';
-  products = data;
+  title: string = 'Shop';
+  tvData = [...tv];
+  mobileData = [...mobile];
   showHide = false;
   language = 'ltr';
+  activeLink = null;
+  message;
+
+
 
   public ngOnInit(){
     this.back = this.back.bind(this);
@@ -42,7 +47,11 @@ export class AppComponent {
   public buyAllOrReset(){
     this.cart = [];
     this.sum = null;
-    this.products.map(item => {
+    
+    this.tvData.map(item => {
+      item.added = false;
+    })
+    this.mobileData.map(item => {
       item.added = false;
     })
   }
@@ -53,7 +62,10 @@ export class AppComponent {
 
   public changeLanguage() {
     this.language = this.language == 'ltr' ? 'rtl' : 'ltr';
-    console.log(this.language);
+  }
+
+  reciveTest($event) {
+    this.buyAllOrReset();
   }
 
 }
